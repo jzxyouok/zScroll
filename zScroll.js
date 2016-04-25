@@ -171,8 +171,8 @@
 			var scrollBox = this.scrollBox,
 				scrollBars = this.scrollBars;
 			this.initBoxEvent(scrollBox);
-			scrollBars[0].data('axis', 'x');
-			scrollBars[1].data('axis', 'y');
+			scrollBars[0] && scrollBars[0].data('axis', 'x');
+			scrollBars[1] && scrollBars[1].data('axis', 'y');
 			this.initBarEvent(scrollBars[0]);
 			this.initBarEvent(scrollBars[1]);
 			var _this = this;
