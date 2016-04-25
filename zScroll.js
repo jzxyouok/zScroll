@@ -206,7 +206,7 @@
 		keydown: function ($el) {
 			var _this = this;
 			this.options.keyboard.enable && $el.on('keydown', function (event) {
-				if (~_this.keyboard.disableOver.join('').indexOf(event.target.tagName.toLowerCase())) {
+				if (~_this.options.keyboard.disableOver.join('').indexOf(event.target.tagName.toLowerCase())) {
 					return;
 				}
 				var scrollIncrement = _this.options.scrollIncrement;
@@ -454,7 +454,7 @@
 				offset = 0;
 				if (scrollBars[1]
 					&& !scrollBars[1].hasClass('hide')
-					&& this.options.scrollbarPosition !== 'outside') {
+					&& this.options.scrollbarPosition === 'inside') {
 					//has v bar need offset
 					offset = scrollBars[1].find('.zscroll-dragger-container').width(); //横向滚动条高度作为偏移量
 				}
@@ -470,7 +470,7 @@
 					this.w_ratio = (w4 - w3) / (c_width - b_width);
 				}
 				if (this.options.scrollbarPosition === 'outside') {
-					scrollBars[0].css('bottom', -scrollBars[0].height());
+					scrollBars[0].css('bottom', -scrollBars[0].find('.zscroll-dragger-container').height());
 				}
 				if (localStorage && localStorage.getItem('zscroll-' + this.idx + 'x')) {
 					this.scrollX(localStorage.getItem('zscroll-' + this.idx + 'x'), true);
@@ -482,7 +482,7 @@
 				offset = 0;
 				if (scrollBars[0]
 					&& !scrollBars[0].hasClass('hide')
-					&& this.options.scrollbarPosition !== 'outside') {
+					&& this.options.scrollbarPosition === 'inside') {
 					//has h bar need offset
 					offset = scrollBars[0].find('.zscroll-dragger-container').height(); //横向滚动条高度作为偏移量
 				}
@@ -500,7 +500,7 @@
 					this.h_ratio = (h4 - h3) / (c_height - b_height);
 				}
 				if (this.options.scrollbarPosition === 'outside') {
-					scrollBars[1].css('right', -scrollBars[1].width());
+					scrollBars[1].css('right', -scrollBars[1].find('.zscroll-dragger-container').width());
 				}
 				if (localStorage && localStorage.getItem('zscroll-' + this.idx + 'y')) {
 					this.scrollY(localStorage.getItem('zscroll-' + this.idx + 'y'), true);

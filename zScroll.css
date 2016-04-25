@@ -35,7 +35,7 @@
 	user-select: none;
 	position: absolute;
 	cursor: pointer;
-	transition: all ease-in-out .3s;
+	transition: all ease-in-out .2s;
 	opacity: 1;
 	filter: alpha(100);
 	overflow: visible;
