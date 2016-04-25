@@ -469,6 +469,7 @@
 					scrollBars[0].addClass('hide');
 					this.w_ratio = 1;
 				} else {
+					scrollBars[0].removeClass('hide');
 					this.w_ratio = (w4 - w3) / (c_width - b_width);
 				}
 				if (this.options.scrollbarPosition === 'outside') {
@@ -499,6 +500,7 @@
 					scrollBars[1].addClass('hide');
 					this.h_ratio = 1;
 				} else {
+					scrollBars[1].removeClass('hide');
 					this.h_ratio = (h4 - h3) / (c_height - b_height);
 				}
 				if (this.options.scrollbarPosition === 'outside') {
