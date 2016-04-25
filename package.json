@@ -1,0 +1,15 @@
+{
+  "name": "zscroll",
+  "version": "1.0.0",
+  "description": "zscroll is scroller component for web",
+  "main": "zScroll.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "zscroll",
+    "scroll"
+  ],
+  "author": "zman",
+  "license": "ISC"
+}

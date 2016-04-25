@@ -1,0 +1,178 @@
+.zscroll {
+
+}
+
+.zscroll.scrolling {
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	cursor: pointer;
+}
+
+.zscroll-box {
+	position: relative;
+	overflow: hidden;
+	outline: none;
+}
+
+.zscroll-container {
+	position: relative;
+	display: inline-block;
+	transition: all ease-in-out .3s;
+}
+
+.zscroll-bar {
+	display: none;
+}
+
+/* 滚动条外层容器 */
+.zscroll .zscroll-bar {
+	display: block;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	position: absolute;
+	cursor: pointer;
+	transition: all ease-in-out .3s;
+	opacity: 1;
+	filter: alpha(100);
+	overflow: visible;
+	outline: none;
+
+}
+
+.zscroll.zscroll-auto-hide .zscroll-bar {
+	opacity: 0;
+	filter: alpha(0);
+}
+
+.zscroll.zscroll-auto-hide.mouse-over .zscroll-bar {
+	opacity: 1;
+	filter: alpha(100);
+}
+
+.zscroll .zscroll-bar.hide {
+	display: none;
+}
+
+/* 滚动条容器 */
+.zscroll-bar .zscroll-dragger-container {
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	height: auto;
+	transition: all ease-in-out .15s;
+}
+
+/* 滚动曹 */
+.zscroll-bar .zscroll-draggerRail {
+	border-radius: 16px;
+	background: #FFF;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	position: absolute;
+	z-index: 0;
+	opacity: .8;
+	filter: alpha(80);
+	transition: all ease-in-out .3s;
+}
+
+.zscroll-bar.mouse-over .zscroll-draggerRail {
+	opacity: 1;
+	filter: alpha(100);
+}
+
+/* 拖拽块容器*/
+.zscroll-bar .zscroll-dragger {
+	position: absolute;
+	overflow: hidden;
+	cursor: pointer;
+	transition: all ease-in-out .15s;
+}
+
+.zscroll-bar.mouse-move .zscroll-dragger {
+	transition: none;
+}
+
+.zscroll-bar .zscroll-dragger:hover {
+
+}
+
+/* 拖拽块 */
+.zscroll-bar .zscroll-dragger-bar {
+	background-color: #8e8e8e;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	border-radius: 16px;
+}
+
+/* 横向 */
+.zscroll-bar.zscroll-bar-h {
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+
+.zscroll-bar.zscroll-bar-h .zscroll-dragger-container {
+	top: auto;
+	height: 5px;
+}
+
+.zscroll-bar.zscroll-bar-h:hover .zscroll-dragger-container,
+.zscroll-bar.zscroll-bar-h.mouse-down .zscroll-dragger-container {
+	height: 10px;
+}
+
+.zscroll-bar.zscroll-bar-h .zscroll-draggerRail {
+
+}
+
+.zscroll-bar.zscroll-bar-h .zscroll-dragger {
+	height: 100%;
+	left: 0;
+}
+
+.zscroll-bar.mouse-move.zscroll-bar-h .zscroll-dragger,
+.zscroll-bar.zscroll-bar-h .zscroll-dragger:hover {
+
+}
+
+/* 纵向 */
+.zscroll-bar.zscroll-bar-v {
+	bottom: 0;
+	top: 0;
+	right: 0;
+}
+
+.zscroll-bar.zscroll-bar-v .zscroll-dragger-container {
+	left: auto;
+	width: 5px;
+}
+
+.zscroll-bar.zscroll-bar-v:hover .zscroll-dragger-container,
+.zscroll-bar.zscroll-bar-v.mouse-down .zscroll-dragger-container {
+	width: 10px;
+}
+
+.zscroll-bar.zscroll-bar-v .zscroll-draggerRail {
+
+}
+
+.zscroll-bar.zscroll-bar-v .zscroll-dragger {
+	width: 100%;
+	top: 0;
+}
+
+.zscroll-bar.mouse-move.zscroll-bar-v .zscroll-dragger,
+.zscroll-bar.zscroll-bar-v .zscroll-dragger:hover {
+
+}
