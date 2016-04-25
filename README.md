@@ -1,5 +1,6 @@
 # zScroll
-# document
+基于jQuery的自定义滚动组件，支持chrome,edge,safari,fireFox,ie8及以上浏览器
+调用方法如下：
 $(function(){
   $('#test').zScroll();
 })
