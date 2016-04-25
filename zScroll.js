@@ -165,6 +165,8 @@
 				this.options.callbacks.onCreate && this.options.callbacks.onCreate();
 				this.update();
 				$el.addClass('zscroll');
+			} else {
+				this.update();
 			}
 		},
 		initEvent: function () {
